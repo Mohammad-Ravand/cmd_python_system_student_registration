@@ -48,7 +48,7 @@ README.md
 ### Prerequisites
 
 - Python 3.10 or higher
-- [pip](https://pip.pypa.io/en/stable/installation/)
+- [uv](https://github.com/astral-sh/uv) (for dependency management)
 
 ### Installation
 
@@ -58,21 +58,19 @@ README.md
    cd learning-python
    ```
 
-2. **(Optional) Create a virtual environment:**
+2. **Install dependencies using uv:**
    ```sh
-   python -m venv venv
-   .\venv\Scripts\activate
+   uv pip install -r requirements.txt
    ```
-
-3. **Install dependencies:**
+   Or, if using `pyproject.toml`:
    ```sh
-   pip install -r requirements.txt
+   uv pip install -r pyproject.toml
    ```
-   *(If `requirements.txt` is not present, install any required packages manually.)*
+   *(If `requirements.txt` is not present, use `uv` with `pyproject.toml`.)*
 
-4. **Initialize the database:**
+3. **Initialize the database:**
    ```sh
-   python tables/create_tables.py
+   uv run tables/create_tables.py
    ```
 
 ### Usage
@@ -80,7 +78,7 @@ README.md
 Run the main application:
 
 ```sh
-python main.py
+uv run main.py
 ```
 
 Follow the on-screen prompts to register, view, update, or delete students.
@@ -88,7 +86,7 @@ Follow the on-screen prompts to register, view, update, or delete students.
 ### Running Tests
 
 ```sh
-python test.py
+uv run test.py
 ```
 
 ## Customization
