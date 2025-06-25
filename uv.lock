@@ -1,0 +1,33 @@
+version = 1
+revision = 2
+requires-python = ">=3.13"
+
+[[package]]
+name = "learning-python"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "logging" },
+    { name = "sqlite4" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "logging", specifier = ">=0.4.9.6" },
+    { name = "sqlite4", specifier = ">=0.1.1" },
+]
+
+[[package]]
+name = "logging"
+version = "0.4.9.6"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/93/4b/979db9e44be09f71e85c9c8cfc42f258adfb7d93ce01deed2788b2948919/logging-0.4.9.6.tar.gz", hash = "sha256:26f6b50773f085042d301085bd1bf5d9f3735704db9f37c1ce6d8b85c38f2417", size = 96029, upload-time = "2013-06-04T23:43:22.086Z" }
+
+[[package]]
+name = "sqlite4"
+version = "0.1.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/fd/ff/6cb2101490ade1b07cd00a94ea7f0319f2e95567be925fcaf30b4110efa2/SQLite4-0.1.1.tar.gz", hash = "sha256:660f020b50d3bee97fa6250b65dc0ba0788fd62440cfe4cde85dc18dc9fe7430", size = 6042, upload-time = "2023-07-15T04:35:10.739Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/bf/f3/104194d5e07621706cb2b04f21e6b5edee6d5b1056f83b895d19f816d608/SQLite4-0.1.1-py3-none-any.whl", hash = "sha256:41144eaee3f3916772e4177bd242d58c5f7bcf47ec7c4472ae9106c9c26d6d37", size = 7095, upload-time = "2023-07-15T04:35:08.352Z" },
+]
